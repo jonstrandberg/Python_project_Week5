@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+  <div>
+    <p>{{album.title}}</p>
+    <p>{{album.arist}}</p>
+    <p>{{album.genre}}</p>
+    <p>{{record_labels.name }}</p>
+    <p>{{album.stock}}</p>
+    <p>{{album.buy_price}}</p>
+    <p>{{album.sell_price}}</p>
+    <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
+  </div>
+
+{% endblock %}

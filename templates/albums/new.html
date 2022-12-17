@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/albums" method="post">
+
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" placeholder="Title" required autofocus>
+  </div>
+
+  <div>
+    <label for="title">Artist:</label>
+    <input type="text" id="artist" name="artist" placeholder="Artist" required autofocus>
+  </div>
+
+  <div>
+    <label for="genre">Genre:</label>
+    <input type="text" id="genre" name="genre" placeholder="Genre" required autofocus>
+  </div>
+
+  <div>
+    <label for="record_label">Record Label:</label>
+    <select id="record_label" name="record_label_id">
+      {% for record_label in all_record_labels %}
+        <option value="{{ record_label.id }}">{{ record_label.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <button type="submit">Add Album</button>
+
+</form>
+
+{% endblock %}
