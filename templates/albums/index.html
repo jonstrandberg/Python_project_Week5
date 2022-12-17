@@ -4,7 +4,7 @@
 <div class="header2">
     <nav class="navbar">
         <a href="/albums">Home</a>
-        <a href="home">Albums</a>
+        <a href="/albums">Albums</a>
         <a href="home">Record Labels</a>
     </nav>
 </div>
@@ -14,7 +14,7 @@
     <div>
         <ul>
             <li>
-                Title: {{ album.title }}
+                <a href="/albums/{{album.id}}"> Title: {{ album.title }} </a>
             </li>
             <li>
                 Artist: {{ album.artist }}
@@ -23,7 +23,7 @@
                 Genre: {{ album.genre }}
             </li>
             <li>
-                Record Label: {{ album.record_label.id }}
+                Record Label: {{ album.record_label.name }}
             </li>
             <li>
                 Stock: {{ album.stock }}

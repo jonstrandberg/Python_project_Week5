@@ -30,7 +30,7 @@ def select(id):
 
     if results:
         result = results[0]
-        record_label = Record_label(result['name'], result['id'] )
+        record_label = Record_label(result['name'], result['id'])
     return record_label
 
 def delete_all():
@@ -43,6 +43,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(record_label):
-    sql = "UPDATE record_labels SET (name, artists, genre) = (%s, %s) WHERE id = %"
+    sql = "UPDATE record_labels SET (name) = (%s) WHERE id = %"
     values = [record_label.name, record_label.id]
     run_sql(sql, values)

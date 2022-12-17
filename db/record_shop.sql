@@ -11,7 +11,7 @@ CREATE TABLE albums (
     title VARCHAR(255),
     artist VARCHAR(255),
     genre VARCHAR(255),
-    record_labels_id INT REFERENCES record_labels(id) ON DELETE CASCADE,
+    record_label_id INT REFERENCES record_labels(id) ON DELETE CASCADE,
     stock INT,
     buy_price INT, 
     sell_price INT

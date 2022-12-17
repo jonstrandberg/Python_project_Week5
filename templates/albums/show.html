@@ -1,15 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
 
-  <div>
+<div>
     <p>{{album.title}}</p>
+</div>
+<div>
     <p>{{album.arist}}</p>
+</div>
+<div>
     <p>{{album.genre}}</p>
-    <p>{{record_labels.name }}</p>
+</div>
+<div>
+    <p>{{album.record_label.name}}</p>
+</div>
+<div>
     <p>{{album.stock}}</p>
+</div>
+<div>
     <p>{{album.buy_price}}</p>
+</div>
+<div>
     <p>{{album.sell_price}}</p>
+</div>
+
+<div></div>
     <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
-  </div>
+</div>
+
+<div class="buttons">
+
+    <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
+        <input type="submit" value="Delete">
+    </form>
+</div>
+</section>
 
 {% endblock %}
