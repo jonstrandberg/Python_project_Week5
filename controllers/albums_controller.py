@@ -43,7 +43,7 @@ def show_album(id):
 def edit_album(id):
     album = album_repository.select(id)
     record_labels = record_label_repository.select_all()
-    return render_template('album/edit.html', album = album, all_record_labels = record_labels)
+    return render_template('albums/edit.html', album = album, all_record_labels = record_labels)
 
 #Update album details - POST
 @albums_blueprint.route("/albums/<id>", methods=['POST'])

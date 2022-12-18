@@ -49,7 +49,7 @@ def delete(id):
 
 
 def update(album):
-    sql = "UPDATE album SET (title, artists, genre, record_label_id, stock, buy_price, sell_price) = (%s, %s, %s, %s, %, %, %) WHERE id = %s"
-    values = [album.title, album.artist, album.genre, album.record_label.id, album.stock, album.buy_price, album.sell_price] 
+    sql = "UPDATE albums SET (title, artist, genre, record_label_id, stock, buy_price, sell_price) = (%s, %s, %s, %s, %, %, %) WHERE id = %s"
+    values = [album.title, album.artist, album.genre, album.record_label.id, album.stock, album.buy_price, album.sell_price, album.id] 
     print(values)
     run_sql(sql, values)
