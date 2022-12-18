@@ -21,8 +21,9 @@
         <label for="record_label">Record Label:</label>
         <select id="record_label" name="record_label_id">
             {% for record_label in all_record_labels %}
-            <option value="{{ record_label.id }}" {% if album.record_label.id==record_label.id %} selected="selected" {% endif %}>
-                {{ record_label.name }}
+            <option value="{{ record_label.id }}" 
+            {% if album.record_label.id==record_label.id %} selected="selected" {% endif %}>
+            {{ record_label.name }}
             </option>
             {% endfor %}
         </select>

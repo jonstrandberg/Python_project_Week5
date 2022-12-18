@@ -43,6 +43,6 @@ def delete(id):
     run_sql(sql, values)
 
 def update(record_label):
-    sql = "UPDATE record_labels SET (name) = (%s) WHERE id = %"
+    sql = "UPDATE record_labels SET (name) = (%s) WHERE id = %s"
     values = [record_label.name, record_label.id]
     run_sql(sql, values)

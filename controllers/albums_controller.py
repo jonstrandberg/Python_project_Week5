@@ -39,7 +39,7 @@ def show_album(id):
     return render_template('albums/show.html', album = album)
 
 #Edit - GET
-@albums_blueprint.route("/albums/<id>/edit", methods = ['GET'])
+@albums_blueprint.route("/albums/<id>/edit", methods=['GET'])
 def edit_album(id):
     album = album_repository.select(id)
     record_labels = record_label_repository.select_all()
@@ -60,7 +60,7 @@ def update_album(id):
     return redirect('/albums')
 
 #Delete album - POST (button)
-@albums_blueprint.route("/albums/<id>/delete", methods = ['POST'])
+@albums_blueprint.route("/albums/<id>/delete", methods=['POST'])
 def delete_album(id):
     album_repository.delete(id)
     return redirect('/albums')
