@@ -1,6 +1,24 @@
-header { 
+
+
+.header-image { align-items: left; 
 }
 
+h1 {font-family: 'Bebas Neue', cursive; font-size: 1.5rem; margin-left: 1rem; }
+
+.header2 {
+    background: rgb(8, 0, 0); width: 100%;
+}
+
+.header2 .navbar a{
+    color: white;
+    display: inline-block;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.header2 .navbar a:hover{
+    background: rgb(49, 112, 87);
+}
 
 body {font-family: 'Montserrat', sans-serif; font-size: 1rem;}
 
@@ -8,3 +26,11 @@ body {font-family: 'Montserrat', sans-serif; font-size: 1rem;}
 h1 {font-family: 'Bebas Neue', cursive; font-size: 2rem;}
 
 ul > li {list-style: none;}
+
+
+.image-album-display { margin-left: 5rem; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; background-color: rgb(253, 249, 249); box-shadow: 10px 10px 10px rgb(117, 114, 114); width: 85%;
+}
+
+.image-album-display > img { width: 16.6%; align-items: center; 
+}
+

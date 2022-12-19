@@ -3,58 +3,30 @@
 
 <div class="header2">
     <nav class="navbar">
+        <a href="/">Home</a>
         <a href="/albums">Albums</a>
         <a href="/record-labels">Record Labels</a>
     </nav>
 </div>
-<hr>
-    {% for album in all_albums %}
-<div>
-    <div>
-        <ul>
-            <li>
-                <a href="/albums/{{album.id}}"> Title: {{ album.title }} </a>
-            </li>
-            <li>
-                Artist: {{ album.artist }}
-            </li>
-            <li>
-                Genre: {{ album.genre }}
-            </li>
-            <li>
-                Record Label: {{ album.record_label.name }}
-            </li>
-            <li>
-                Stock: {{ album.stock }}
-            </li>
-            <li>
-                Buy Price: {{ album.buy_price }}
-            </li>
-            <li>
-                Sell Price: {{ album.sell_price }}
-            </li>
-        </ul>
-        {% if album.stock == 0 %} 
-        <p> SOLD OUT </p>
-        {% elif album.stock < 5 %}
-        <p> LOW STOCK </p>
-        {% endif %}
 
+<br>
 
-        <hr>
-        <div>
-            <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
-        </div>
-        <div class="buttons">
-
-            <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
-                <input type="submit" value="Delete">
-            </form>
-
-    
-    {% endfor %}
-    </div>
+<div class="image-album-display"> 
+            <img src="static/css/images/R1344-007-Fleetwood-Mac-RUMOURS.webp" alt="Rumours album by Fleetwood Mac">
+            <img src="static/css/images/R1344-021-Bruce-Springsteen-BORN-TO-RUN.webp" alt="Born to Run by Bruce Springsteen">
+            <img src="static/css/images/R1344-052-David-Bowie-Station-to-Station.webp" alt="Station to Station by David Bowie">
+            <img src="static/css/images/R1344-055-Pink-Floyd-Dark-Side-of-the-Moon.webp" alt="Dark Side of the Moon by Pink Floyd">
+            <img src="static/css/images/R1344-068-Kate-Bush-Hounds-of-Love.webp" alt="Hounds of Love by Kate Bush">
+            <img src="static/css/images/R1344-096-R.E.M.-Automatic-for-the-People.webp" alt="Automatic for the People by R.E.M">
+            <img src="static/css/images/R1344-113-The-Smiths-The-Queen-Is-Dead.webp" alt="The Queen is Dead by the Smiths">
+            <img src="static/css/images/R1344-128-Queen-A-Night-at-the-Opera.webp" alt="A Night at the Opera by Queen">
+            <img src="static/css/images/R1344-042-Radiohead-OK-Computer.webp" alt="OK Computer by Radiohead">
+            <img src="static/css/images/R1344-039-talking-heads-remain-in-light.webp" alt="Remain in the Light by Talking Heads">
+            <img src="static/css/images/R1344-006-Nirvana-NEVERMIND-HR.webp" alt="Remain in the Light by Talking Heads">
+            <img src="static/css/images/016-Clash-LONDON-CALLING.webp" alt="London Calling by The Clash">
 </div>
-</div>
+
+<br>
+<br>
 
 {% endblock %}

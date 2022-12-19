@@ -13,19 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>ARCHETYPAL RECORDS</title>
+    
 </head>
-
-<body>
-    <h1>ARCHETYPAL RECORDS</h1>
-    {% block content %}
-    <nav>
-        <ul class="menu">
-          <li><a href="{{ url_for('home') }}">Home</a></li>
-          <li><a href="{{ url_for('albums.album') }}">Albums</a></li>
-          <li><a href="{{ url_for('record-labels') }}">Record Labels</a></li>
-        </ul>
-      </nav>
-    {% endblock %}
+<div class="header-image"> <img src="static/css/images/256x256bb.jpeg" alt="Vinyl Logo"></div>
+<div class="header-text"></div>
+<h1> ARCHETYPAL RECORDS </h1>
+{% block content %}
+{% endblock %}
 </body>
 
 </html>

@@ -3,11 +3,12 @@
 
 <div class="header2">
     <nav class="navbar">
+        <a href="/">Home</a>
         <a href="/albums">Albums</a>
         <a href="/record-labels">Record Labels</a>
     </nav>
 </div>
-<hr>
+
     {% for record_label in record_labels %}
 <div>
     <div>
@@ -22,7 +23,6 @@
                 Founded: {{ record_label.founded }}
             </li>
         </ul>
-        <hr>
         <div>
             <p><a href="/record-labels/{{record_label.id}}/edit">Edit</a></p>
         </div>
@@ -30,7 +30,7 @@
             <form class="delete-form" action="/record-labels/{{record_label.id}}/delete" method="POST">
                 <input type="submit" value="Delete">
             </form>
-    
+            <hr>
     {% endfor %}
     </div>
 </div>
