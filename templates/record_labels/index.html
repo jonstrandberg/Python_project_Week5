@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="header2">
+    <nav class="navbar">
+        <a href="/albums">Albums</a>
+        <a href="/record-labels">Record Labels</a>
+    </nav>
+</div>
+<hr>
+    {% for record_label in record_labels %}
+<div>
+    <div>
+        <ul>
+            <li>
+                <a href="/record-labels/{{record_label.id}}"> Name: {{ record_label.name }} </a>
+            </li>
+            <li>
+                Location: {{ record_label.location}}
+            </li>
+            <li>
+                Founded: {{ record_label.founded }}
+            </li>
+        </ul>
+        <hr>
+        <div>
+            <p><a href="/record-labels/{{record_label.id}}/edit">Edit</a></p>
+        </div>
+        <div class="buttons">
+            <form class="delete-form" action="/record-labels/{{record_label.id}}/delete" method="POST">
+                <input type="submit" value="Delete">
+            </form>
+    
+    {% endfor %}
+    </div>
+</div>
+</div>
+
+    {% endblock %}

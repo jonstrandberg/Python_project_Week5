@@ -3,7 +3,9 @@ DROP TABLE IF EXISTS record_labels;
 
 CREATE TABLE record_labels (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(255)
+    name VARCHAR(255),
+    location VARCHAR(255),
+    founded INT
 ); 
 
 CREATE TABLE albums (

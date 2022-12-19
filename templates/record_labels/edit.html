@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/record_labels/{{record_label.id}}" method="post">
+    <div>
+        <label for="title">Name:</label>
+        <input type="text" id="name" name="name" value="{{record_label.name}}" required>
+    </div>
+
+    <div>
+        <label for="title">Location:</label>
+        <input type="text" id="location" name="location" value="{{record_label.location}}" required>
+    </div>
+
+    <div>
+        <label for="genre">Founded:</label>
+        <input type="text" id="founded" name="founded" value="{{record_label.founded}}" required>
+    </div>
+
+    <button type="submit">Update Record Label</button>
+
+</form>
+
+{% endblock %}

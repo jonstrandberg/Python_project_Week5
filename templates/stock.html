@@ -1,17 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
-<div class="header2">
-    <nav class="navbar">
-        <a href="/albums">Albums</a>
-        <a href="/record-labels">Record Labels</a>
-    </nav>
-</div>
-<div>
-    <p><a href="/albums//new">Add new album</a></p>
-</div>
-<hr>
-    {% for album in all_albums %}
+{% for album in all_albums %}
 <div>
     <div>
         <ul>
@@ -37,13 +26,6 @@
                 Sell Price: {{ album.sell_price }}
             </li>
         </ul>
-        {% if album.stock == 0 %} 
-        <p> SOLD OUT </p>
-        {% elif album.stock < 5 %}
-        <p> LOW STOCK </p>
-        {% endif %}
-
-
         <hr>
         <div>
             <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
@@ -54,10 +36,12 @@
                 <input type="submit" value="Delete">
             </form>
 
-    
-    {% endfor %}
-    </div>
-</div>
-</div>
+        {% if album.stock == 0 %} 
+        <p> SOLD OUT </p>
+        {% elif album.stock < 5 %}
+        <p> STOCK </p>
+        {% endif %}
 
-    {% endblock %}
+{% endfor %}
+
+{% endblock %}

@@ -6,6 +6,11 @@ import repositories.album_repository as album_repository
 
 albums_blueprint = Blueprint("albums", __name__)
 
+@albums_blueprint.route('/')
+def home():
+    albums = album_repository.select_all()
+    return render_template("/index.html", all_albums = albums)
+
 # Show all albums
 @albums_blueprint.route("/albums")
 def albums():
@@ -64,6 +69,11 @@ def update_album(id):
 def delete_album(id):
     album_repository.delete(id)
     return redirect('/albums')
+
+@albums_blueprint.route("/stock",methods=['GET'])
+def stock_inventory():
+    albums = album_repository.select_all()
+    return render_template("/stock.html", all_albums = albums)
 
 
 
