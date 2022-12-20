@@ -8,8 +8,11 @@
         <a href="/record-labels">Record Labels</a>
     </nav>
 </div>
-<div>
-    <p><a href="/albums//new">Add new album</a></p>
+<br>
+<div class="new-album">
+    <a href="/albums//new">
+        <button>Add New Album</button>
+    </a>
 </div>
 <hr>
     {% for album in all_albums %}
@@ -39,15 +42,18 @@
             </li>
         </ul>
         {% if album.stock == 0 %} 
-        <p> SOLD OUT </p>
+        <p> SOLD OUT &#10060;</p>
         {% elif album.stock < 5 %}
-        <p> LOW STOCK </p>
+        <p> LOW STOCK </p> 
+        <div class="warning">
+        &#9888;&#65039;
+        </div>
         {% endif %}
 
+        
 
-        <hr>
-        <div>
-            <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
+        <div class="edit-album">
+            <h4><a href="/albums/{{album.id}}/edit">Edit</a></h4>
         </div>
         <div class="buttons">
 
@@ -55,7 +61,7 @@
                 <input type="submit" value="Delete">
             </form>
 
-    
+    <hr>
     {% endfor %}
     </div>
 </div>

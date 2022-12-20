@@ -8,7 +8,13 @@
         <a href="/record-labels">Record Labels</a>
     </nav>
 </div>
-
+<br>
+<div class="new-record-label">
+    <a href="/record-labels//new">
+        <button>Add Record Label</button>
+    </a>
+</div>
+<hr>
     {% for record_label in record_labels %}
 <div>
     <div>
@@ -23,7 +29,7 @@
                 Founded: {{ record_label.founded }}
             </li>
         </ul>
-        <div>
+        <div class="edit-record-label">
             <p><a href="/record-labels/{{record_label.id}}/edit">Edit</a></p>
         </div>
         <div class="buttons">
@@ -35,5 +41,6 @@
     </div>
 </div>
 </div>
+
 
     {% endblock %}

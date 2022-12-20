@@ -17,7 +17,7 @@ h1 {font-family: 'Bebas Neue', cursive; font-size: 1.5rem; margin-left: 1rem; }
 }
 
 .header2 .navbar a:hover{
-    background: rgb(49, 112, 87);
+    background: rgb(255, 191, 0);
 }
 
 body {font-family: 'Montserrat', sans-serif; font-size: 1rem;}
@@ -27,10 +27,56 @@ h1 {font-family: 'Bebas Neue', cursive; font-size: 2rem;}
 
 ul > li {list-style: none;}
 
+input[type=submit] {
+    background-color: rgb(146, 0, 0);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
 
-.image-album-display { margin-left: 5rem; display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; background-color: rgb(253, 249, 249); box-shadow: 10px 10px 10px rgb(117, 114, 114); width: 85%;
+input[type=submit]:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+button { 
+    margin-left: 2rem;
+    background-color: rgb(255, 162, 31); color: black;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+
+button:hover {background-color: rgb(246, 255, 0);
+}
+
+.image-album-display { 
+margin-left: 5rem; 
+display: flex; 
+flex-direction: row; 
+flex-wrap: wrap; 
+align-items: center; 
+background-color: rgb(253, 249, 249); 
+box-shadow: 10px 10px 10px rgb(117, 114, 114); 
+width: 85%;
 }
 
 .image-album-display > img { width: 16.6%; align-items: center; 
 }
 
+.edit-album { margin-left: 2.5rem;
+}
+
+
+.delete-form { margin-left: 2.3rem;
+}
+
+a { font-weight: bold;
+}
+
+p { 
+color: rgb(0, 0, 0);
+font-weight: bold;    
+margin-left: 2.5rem; 
+}
+
+.warning { margin-left: 2.5rem;
+}
