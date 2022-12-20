@@ -25,8 +25,19 @@
             <img src="static/css/images/R1344-006-Nirvana-NEVERMIND-HR.webp" alt="Remain in the Light by Talking Heads">
             <img src="static/css/images/016-Clash-LONDON-CALLING.webp" alt="London Calling by The Clash">
 </div>
+<br>
+<div class="Stock-Hub">
+<h2> STOCK HUB </h2>
 
-<br>
-<br>
+<div class="Low-Stock">
+<h3> Low Stock </h3>
+{% for album in all_albums %}
+{% if album.stock < 5 %}
+<h4> {{album.title}} is low in stock. Current stock is {{album.stock}}. Contact the record company to order more copies!</h4>
+{% endif %}
+{% endfor %}
+</div>
+
+
 
 {% endblock %}

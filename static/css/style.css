@@ -78,5 +78,16 @@ font-weight: bold;
 margin-left: 2.5rem; 
 }
 
-.warning { margin-left: 2.5rem;
+.warning { 
+margin-left: 2.5rem;
+}
+
+.no-stock {
+margin-left: 2.5rem;
+}
+
+.Stock-Hub { margin-left: 4rem;
+}
+
+.Stock-Hub > h2 { font-family: 'Bebas Neue', cursive; font-size: 1.5rem;
 }

@@ -40,9 +40,15 @@
             <li>
                 Sell Price: {{ album.sell_price }}
             </li>
+            <li>
+                Profit: {{ album.sell_price - album.buy_price }}
+            </li>
         </ul>
         {% if album.stock == 0 %} 
-        <p> SOLD OUT &#10060;</p>
+        <p> SOLD OUT </p>
+        <div class="no-stock">
+        &#10060;
+        </div>
         {% elif album.stock < 5 %}
         <p> LOW STOCK </p> 
         <div class="warning">
