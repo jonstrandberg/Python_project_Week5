@@ -53,3 +53,4 @@ def update(album):
     values = [album.title, album.artist, album.genre, album.record_label.id, album.stock, album.buy_price, album.sell_price, album.id] 
     print(values)
     run_sql(sql, values)
+

@@ -19,7 +19,10 @@ CREATE TABLE albums (
     sell_price INT
 ); 
 
-
+CREATE TABLE customers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255)
+)
 
 
 

@@ -48,5 +48,5 @@ album_10 = Album("London's Calling", "The Clash", "Punk", record_label_8, 3, 8, 
 album_repository.save(album_10)
 album_11 = Album("Remain in Light", "Talking Heads", "Rock", record_label_5, 4, 12, 17)
 album_repository.save(album_11)
-album_12 = Album("OK Computer", "Radiohead", "Inde", record_label_9, 18, 11, 17)
+album_12 = Album("OK Computer", "Radiohead", "Inde", record_label_9, 0, 11, 17)
 album_repository.save(album_12)

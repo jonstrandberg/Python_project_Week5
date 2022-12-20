@@ -6,3 +6,4 @@ class Record_label:
         self.location = location
         self.founded = founded 
         self.id = id 
+
