@@ -4,8 +4,8 @@
 <div class="header2">
     <nav class="navbar">
         <<a href="/">Home</a>
-        <a href="/albums">Albums</a>
-        <a href="/record-labels">Record Labels</a>
+            <a href="/albums">Albums</a>
+            <a href="/record-labels">Record Labels</a>
     </nav>
 </div>
 <br>
@@ -14,20 +14,20 @@
         <button>Add New Album</button>
     </a>
     <form action="/filter" method="post">
-    <label for="record_label">Record Label:</label>
-    <select id="record_label" name="record_label_id">
-        {% for record_label in record_labels %}
-        <option value="{{ record_label.id }}">
-        {{ record_label.name }}
-        </option>
-        {% endfor %}
-    </select>
-    <button id="filter" type="submit">Filter</button>
-</form>
+        <label for="record_label">Record Label:</label>
+        <select id="record_label" name="record_label_id">
+            {% for record_label in record_labels %}
+            <option value="{{ record_label.id }}">
+                {{ record_label.name }}
+            </option>
+            {% endfor %}
+        </select>
+        <button id="filter" type="submit">Filter</button>
+    </form>
 </div>
 <br>
 <hr>
-    {% for album in albums %}
+{% for album in albums %}
 <div>
     <div>
         <ul>
@@ -56,29 +56,29 @@
                 Profit: {{ album.sell_price - album.buy_price }}
             </li>
         </ul>
-        {% if album.stock == 0 %} 
+        {% if album.stock == 0 %}
         <p> SOLD OUT </p>
         <div class="no-stock">
-        &#10060;
+            &#10060;
         </div>
-        {% elif album.stock < 5 %}
-        <p> LOW STOCK </p> 
-        <div class="warning">
-        &#9888;&#65039;
-        </div>
-        {% endif %}
-        <form action="/albums/{{album.id}}/edit" class="edit-link">
-            <button class="edit-button" >Edit</button>
-        </form>
         <br>
+        {% elif album.stock < 5 %} <p> LOW STOCK </p>
+            <div class="warning">
+                &#9888;&#65039;
+            </div>
+            <br>
+            {% endif %}
+            <form action="/albums/{{album.id}}/edit" class="edit-link">
+                <button class="edit-button">Edit</button>
+            </form>
+            <br>
             <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
                 <input type="submit" value="Delete">
             </form>
 
-    <hr>
-    {% endfor %}
+            <hr>
+            {% endfor %}
     </div>
 </div>
-</div>
 
-    {% endblock %}
+{% endblock %}

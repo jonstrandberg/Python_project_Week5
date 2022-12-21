@@ -11,9 +11,9 @@
     <p>{{record_label.founded}}</p>
 </div>
 
-<div>
-    <p><a href="/record_labels/{{record_label.id}}/edit">Edit</a></p>
-</div>
+<form action="/record-labels/{{record_label.id}}/edit" class="edit-link-records">
+    <button class="record-labels-button" >Edit</button>
+</form>
 <div class="buttons">
 
     <form class="delete-form" action="/record_labels/{{record_label.id}}/delete" method="POST">

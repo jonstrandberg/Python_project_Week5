@@ -3,28 +3,22 @@
 
 <div>
     <p>{{album.title}}</p>
-</div>
-<div>
+<br>
     <p>{{album.arist}}</p>
-</div>
-<div>
+<br>
     <p>{{album.genre}}</p>
-</div>
-<div>
+<br>
     <p>{{album.record_label.name}}</p>
-</div>
-<div>
+<br>
     <p>{{album.stock}}</p>
-</div>
-<div>
+<br>
     <p>{{album.buy_price}}</p>
-</div>
-<div>
+<br>
     <p>{{album.sell_price}}</p>
-</div>
-<div>
-    <p><a href="/albums/{{album.id}}/edit">Edit</a></p>
-</div>
+<br>
+<form action="/albums/{{album.id}}/edit" class="edit-link">
+    <button class="edit-button">Edit</button>
+</form>
 <div class="buttons">
 
     <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
