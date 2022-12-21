@@ -9,12 +9,10 @@
     </nav>
 </div>
 <br>
-<div class="new-album">
+<div class="new-or-filter-section">
     <a href="/albums//new">
         <button>Add New Album</button>
     </a>
-</div>
-<div>
     <form action="/filter" method="post">
     <label for="record_label">Record Label:</label>
     <select id="record_label" name="record_label_id">
@@ -24,9 +22,10 @@
         </option>
         {% endfor %}
     </select>
-    <button type="submit">Submit</button>
+    <button id="filter" type="submit">Filter</button>
 </form>
 </div>
+<br>
 <hr>
     {% for album in albums %}
 <div>
@@ -68,14 +67,10 @@
         &#9888;&#65039;
         </div>
         {% endif %}
-
-        
-
-        <div class="edit-album">
-            <h4><a href="/albums/{{album.id}}/edit">Edit</a></h4>
-        </div>
-        <div class="buttons">
-
+        <form action="/albums/{{album.id}}/edit" class="edit-link">
+            <button class="edit-button" >Edit</button>
+        </form>
+        <br>
             <form class="delete-form" action="/albums/{{album.id}}/delete" method="POST">
                 <input type="submit" value="Delete">
             </form>

@@ -14,6 +14,7 @@
         <button>Add Record Label</button>
     </a>
 </div>
+<br>
 <hr>
     {% for record_label in record_labels %}
 <div>
@@ -29,9 +30,10 @@
                 Founded: {{ record_label.founded }}
             </li>
         </ul>
-        <div class="edit-record-label">
-            <p><a href="/record-labels/{{record_label.id}}/edit">Edit</a></p>
-        </div>
+        <form action="/record-labels/{{record_label.id}}/edit" class="edit-link-records">
+            <button class="record-labels-button" >Edit</button>
+        </form>
+        <br>
         <div class="buttons">
             <form class="delete-form" action="/record-labels/{{record_label.id}}/delete" method="POST">
                 <input type="submit" value="Delete">

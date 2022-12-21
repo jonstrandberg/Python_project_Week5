@@ -65,6 +65,11 @@ width: 85%;
 .edit-album { margin-left: 2.5rem;
 }
 
+.new-record-label {
+margin-left: 0.4rem;
+}
+
+
 
 .delete-form { margin-left: 2.3rem;
 }
@@ -90,4 +95,21 @@ margin-left: 2.5rem;
 }
 
 .Stock-Hub > h2 { font-family: 'Bebas Neue', cursive; font-size: 1.5rem;
+}
+
+.new-or-filter-section { 
+display: flex;
+justify-content: space-between;
+}
+
+#filter { 
+margin-right: 7rem;
+}
+
+.edit-button {
+margin-left: 2.4rem;
+}
+
+.edit-link-records {
+margin-left: 0.3rem;
 }
