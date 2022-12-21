@@ -47,15 +47,3 @@ def update(record_label):
     values = [record_label.name, record_label.location, record_label.founded, record_label.id]
     run_sql(sql, values)
 
-def filter_by_record_label(id):
-    record_labels = []
-
-    sql = "SELECT * FROM record_labels WHERE id = %s"
-    values = [id]
-    results = run_sql(sql, values)
-
-    if results:
-        result = results[0]
-        record_label = Record_label(result['name'], result['location'], result['founded'], result['id'])
-        record_labels.append(record_label)
-    return record_labels

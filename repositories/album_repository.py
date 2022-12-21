@@ -54,3 +54,14 @@ def update(album):
     print(values)
     run_sql(sql, values)
 
+def filter_album(id):
+    albums = []
+
+    sql = "SELECT * FROM albums WHERE record_label_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        album = Album(row['title'], row['artist'], row['genre'], row['record_label_id'], row['stock'], row['buy_price'], row['sell_price'], row['id'])
+        albums.append(album)
+    return albums

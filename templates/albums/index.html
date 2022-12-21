@@ -14,8 +14,21 @@
         <button>Add New Album</button>
     </a>
 </div>
+<div>
+    <form action="/filter" method="post">
+    <label for="record_label">Record Label:</label>
+    <select id="record_label" name="record_label_id">
+        {% for record_label in record_labels %}
+        <option value="{{ record_label.id }}">
+        {{ record_label.name }}
+        </option>
+        {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+</div>
 <hr>
-    {% for album in all_albums %}
+    {% for album in albums %}
 <div>
     <div>
         <ul>

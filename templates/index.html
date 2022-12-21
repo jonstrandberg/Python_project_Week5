@@ -33,7 +33,7 @@
 <h3> Low Stock </h3>
 {% for album in all_albums %}
 {% if album.stock < 5 %}
-<h4> {{album.title}} is low in stock. Current stock is {{album.stock}}. Contact the record company to order more copies!</h4>
+<h4> {{album.title}} is low in stock. Current stock is {{album.stock}}. Contact supplier to order more copies!</h4>
 {% endif %}
 {% endfor %}
 </div>

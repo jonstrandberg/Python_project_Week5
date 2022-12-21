@@ -17,7 +17,8 @@ def home():
 @albums_blueprint.route("/albums")
 def albums():
     albums = album_repository.select_all()
-    return render_template("albums/index.html", all_albums = albums)
+    record_labels = record_label_repository.select_all()
+    return render_template("albums/index.html", albums = albums, record_labels = record_labels)
 
 # New album
 @albums_blueprint.route("/albums/new", methods=['GET'])
@@ -77,5 +78,10 @@ def stock_inventory():
     albums = album_repository.select_all()
     return render_template("/stock.html", all_albums = albums)
 
-
+@albums_blueprint.route("/filter", methods=['POST'])
+def filter_by_label():
+    id = request.form['record_label_id']
+    record_labels = record_label_repository.select_all()
+    albums = album_repository.filter_album(id)
+    return render_template("albums/index.html", record_labels = record_labels, albums = albums)
 
