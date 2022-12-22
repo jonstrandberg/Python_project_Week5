@@ -2,19 +2,13 @@
 {% block content %}
 
 <div>
-    <p>{{album.title}}</p>
-<br>
-    <p>{{album.arist}}</p>
-<br>
-    <p>{{album.genre}}</p>
-<br>
-    <p>{{album.record_label.name}}</p>
-<br>
-    <p>{{album.stock}}</p>
-<br>
-    <p>{{album.buy_price}}</p>
-<br>
-    <p>{{album.sell_price}}</p>
+    <p>Title: {{album.title}}</p>
+    <p>Artist: {{album.artist}}</p>
+    <p>Genre: {{album.genre}}</p>
+    <p>Record Labale: {{album.record_label.name}}</p>
+    <p>Stock: {{album.stock}}</p>
+    <p>Buy Price:{{album.buy_price}}</p>
+    <p>Sell Price:{{album.sell_price}}</p>
 <br>
 <form action="/albums/{{album.id}}/edit" class="edit-link">
     <button class="edit-button">Edit</button>

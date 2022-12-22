@@ -2,13 +2,9 @@
 {% block content %}
 
 <div>
-    <p>{{record_label.name}}</p>
-</div>
-<div>
-    <p>{{record_label.location}}</p>
-</div>
-<div>
-    <p>{{record_label.founded}}</p>
+    <p>Name: {{record_label.name}}</p>
+    <p>Location: {{record_label.location}}</p>
+    <p>Founded: {{record_label.founded}}</p>
 </div>
 
 <form action="/record-labels/{{record_label.id}}/edit" class="edit-link-records">
